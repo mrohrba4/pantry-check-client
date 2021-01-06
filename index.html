@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Pantry Check</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,61 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <div class="container-fluid">
+        	<div class="row">
+        		<div class="col-md-12">
+                <h1>Nav bar</h1>
+        		</div>
+        	</div>
+          <p id="message"></p>
+        	<div class="row">
+        		<div class="col-md-12">
+        			<div class="row">
+        				<div class="signs col-md-6">
+                  <p>Sign in</p>
+                  <form id="sign-in">
+                    <input class="si1"
+                      name="credentials[email]"
+                      type="text"
+                      placeholder="Email"
+                    />
+                    <input class="si1"
+                      name="credentials[password]"
+                      type="password"
+                      placeholder="Password"
+                    />
+                    <button class="sibutton" type="submit">Submit</button>
+                  </form>
+        				</div>
+        				<div class="signs col-md-6">
+                  <p>Sign up</p>
+                  <form id="sign-up">
+                    <input class="su1"
+                      name="credentials[email]"
+                      type="text"
+                      placeholder="Email"
+                    />
+                    <input class="su1"
+                      name="credentials[password]"
+                      type="password"
+                      placeholder="Password"
+                    />
+                    <input class="su1"
+                      name="credentials[password_confirmation]"
+                      type="password"
+                      placeholder="Confirm Password"
+                    />
+                    <button class="subutton" type="submit">Submit</button>
+                  </form>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="row">
+        		<div class="col-md-12">
+              <p>Footer</p>
+        		</div>
+        	</div>
+      </div>
     </body>
 </html>
