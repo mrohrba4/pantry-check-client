@@ -17,6 +17,9 @@ const signInSuccess = function (response) {
   $('#message').text('Signed In Successfully!')
   store.user = response.user
   $('form').trigger('reset')
+  $('.sucon').toggle()
+  $('.sicon').toggle()
+  $('.sipcon').toggle()
 }
 
 const signInFailure = function () {

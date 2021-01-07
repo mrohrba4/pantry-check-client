@@ -7,6 +7,7 @@ const events = require('./events')
 // require('./example')
 
 $(() => {
+  $('.sipcon').hide()
   // sign-up action
   $('#sign-up').on('submit', events.onSignUp)
   // Sign-in action.
