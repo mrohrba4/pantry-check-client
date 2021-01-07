@@ -16,16 +16,16 @@
       <!-- Main Container -->
       <div class="container-fluid">
         <!-- Nav bar Row -->
-        	<div class="row">
+        	<div class="nvr row">
             <!-- Nav bar col -->
         		<div class="navbar col-md-12">
                 <h1>Nav bar</h1>
         		</div>
         	</div>
           <!-- Main content Row -->
-        	<div class="row">
+        	<div class="mc row">
             <!-- Main content col -->
-        		<div class="col-md-12">
+        		<div class="mc2 col-md-12">
               <!-- Alert message -->
               <p id="message"></p>
               <!-- main display Div -->
@@ -34,7 +34,7 @@
                     <!-- Signed In Page -->
                     <div class="aicon col-md-6">
                       <p>Add Items</p>
-                      <button id="aisub">Add Items</button>
+                      <button id="aipb">Add Items</button>
                     </div>
                     <div class="vicon col-md-6">
                       <p>Show Items</p>
@@ -42,12 +42,31 @@
                     </div>
                     <!-- Add items page -->
                     <div class="aipage col-md-12">
-                      <p>add items page</p>
+                      <p class="ailabel">add items page</p>
+                      <form id="additem" class="flex-column">
+                        <input class="ai1"
+                          name="item[name]"
+                          type="text"
+                          placeholder="Name"
+                        />
+                        <input class="ai1"
+                          name="item[quantity]"
+                          type="number"
+                          placeholder="Quantity"
+                        />
+                        <select name="location" id="location" class="ai1">
+                          <option value="fridge">Fridge</option>
+                          <option value="freezer">Freezer</option>
+                          <option value="pantry">Pantry</option>
+                          <option value="nonfood">Non-food</option>
+                        </select>
+                        <button id="aisubmit" class="ai1" type="submit">Add Item!</button>
+                      </form>
                     </div>
               		</div>
                 <!-- Sign in Div -->
         				<div class="sicon col-md-6">
-                  <p>Sign in</p>
+                  <p class="si1">Sign in</p>
                   <!-- Sign in Form -->
                   <form id="sign-in">
                     <input class="si1"
@@ -60,12 +79,12 @@
                       type="password"
                       placeholder="Password"
                     />
-                    <button class="sibutton" type="submit">Submit</button>
+                    <button class="sibutton si1" type="submit">Submit</button>
                   </form>
         				</div>
                 <!-- Sign up Div -->
         				<div class="sucon col-md-6">
-                  <p>Sign up</p>
+                  <p class="su1">Sign up</p>
                   <!-- Sign up Form -->
                   <form id="sign-up">
                     <input class="su1"
@@ -83,14 +102,14 @@
                       type="password"
                       placeholder="Confirm Password"
                     />
-                    <button class="subutton" type="submit">Submit</button>
+                    <button class="subutton su1" type="submit">Submit</button>
                   </form>
         				</div>
         			</div>
         		</div>
         	</div>
           <!-- Footer Ror -->
-        	<div class="row">
+        	<div class="ft row">
             <!-- Footer col -->
         		<div class="col-md-12">
               <p>Footer</p>

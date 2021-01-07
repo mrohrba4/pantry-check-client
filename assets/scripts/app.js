@@ -13,5 +13,5 @@ $(() => {
   // Sign-in action.
   $('#sign-in').on('submit', events.onSignIn)
   // Add item button action
-  $('#aisub').on('click', events.onAiButton)
+  $('#aipb').on('click', events.onAiButton)
 })

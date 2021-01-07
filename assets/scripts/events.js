@@ -28,6 +28,7 @@ const onSignIn = function (event) {
 const onAiButton = function (event) {
   console.log('Firing')
   event.preventDefault()
+  $('#message').hide()
   $('.aicon').hide()
   $('.vicon').hide()
   $('.aipage').show()

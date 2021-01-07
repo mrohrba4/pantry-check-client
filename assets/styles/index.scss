@@ -1,5 +1,20 @@
 @import '~bootstrap/scss/bootstrap';
 
+// html {
+//   height: 100%;
+// }
+// body {
+//   min-height: 100%;
+// }
+.container-fluid {
+  width: 100%;
+  height: 100vh;
+  display: flex-column;
+  align-content: stretch;
+}
+.nvr {
+  height: 15vh;
+}
 .navbar {
   display: flex;
   align-items: center;
@@ -9,6 +24,17 @@
   border: black 1px solid;
   margin: 10px;
 }
+// .mc {
+//   height: 33vh;
+// }
+// .mc2 {
+//   height: 40vh;
+// }
+.main {
+  display: flex;
+  position: relative;
+  height: 80vh;
+}
 .signs {
   border: black 1px solid;
 }
@@ -16,6 +42,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.sicon {
+  border: black 1px solid;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 45%;
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.si1 {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+.sucon {
+  border: black 1px solid;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.su1 {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
 }
 .sipcon {
   display: flex;
@@ -27,4 +81,23 @@
 .vicon {
   border: black 1px solid;
   margin: 5px;
+}
+.ailabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ai1 {
+  margin: 5px;
+}
+#additem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#location {
+  width: 175px;
+}
+.ft {
+  height: 10vh;
 }
