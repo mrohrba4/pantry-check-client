@@ -24,8 +24,18 @@ const onSignIn = function (event) {
     .catch(ui.signInFailure)
 }
 
+// aisub button function
+const onAiButton = function (event) {
+  console.log('Firing')
+  event.preventDefault()
+  $('.aicon').hide()
+  $('.vicon').hide()
+  $('.aipage').show()
+}
+
 // exporting.
 module.exports = {
   onSignUp,
-  onSignIn
+  onSignIn,
+  onAiButton
 }

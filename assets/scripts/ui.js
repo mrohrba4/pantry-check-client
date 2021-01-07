@@ -17,9 +17,13 @@ const signInSuccess = function (response) {
   $('#message').text('Signed In Successfully!')
   store.user = response.user
   $('form').trigger('reset')
-  $('.sucon').toggle()
-  $('.sicon').toggle()
-  $('.sipcon').toggle()
+  // hide sign up and in forms.
+  $('.sucon').hide()
+  $('.sicon').hide()
+  // show signed in page
+  $('.sipcon').show()
+  // hide add items page.
+  $('.aipage').hide()
 }
 
 const signInFailure = function () {

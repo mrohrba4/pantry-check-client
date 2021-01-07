@@ -1,9 +1,30 @@
 @import '~bootstrap/scss/bootstrap';
 
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .row {
   border: black 1px solid;
   margin: 10px;
 }
 .signs {
   border: black 1px solid;
+}
+#message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sipcon {
+  display: flex;
+}
+.aicon {
+  border: black 1px solid;
+  margin: 5px;
+}
+.vicon {
+  border: black 1px solid;
+  margin: 5px;
 }
