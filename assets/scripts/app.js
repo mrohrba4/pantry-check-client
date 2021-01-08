@@ -8,10 +8,15 @@ const events = require('./events')
 
 $(() => {
   $('.sipcon').hide()
+  $('.sipage').hide()
   // sign-up action
   $('#sign-up').on('submit', events.onSignUp)
   // Sign-in action.
   $('#sign-in').on('submit', events.onSignIn)
   // Add item button action
   $('#aipb').on('click', events.onAiButton)
+  // create or Add new item
+  $('#additem').on('submit', events.onItemCreate)
+  // show items
+  $('#visub').on('click', events.onShowItems)
 })

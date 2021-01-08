@@ -34,9 +34,28 @@ const onAiButton = function (event) {
   $('.aipage').show()
 }
 
+const onItemCreate = function (event) {
+  console.log(event)
+  event.preventDefault()
+  const form = event.target
+  const data = getFormFields(form)
+  console.log(data)
+  api.newItem(data)
+    .then(ui.newItemSuccess)
+    .then(ui.newItemFailure)
+}
+
+const onShowItems = function () {
+  api.showItems()
+    .then(ui.showItemsSuccess)
+    .then(ui.showItemsFailure)
+}
+
 // exporting.
 module.exports = {
   onSignUp,
   onSignIn,
-  onAiButton
+  onAiButton,
+  onItemCreate,
+  onShowItems
 }

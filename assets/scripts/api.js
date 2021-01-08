@@ -21,8 +21,39 @@ const signIn = function (formData) {
   })
 }
 
+// Add Item API
+const newItem = function (data) {
+  console.log(data)
+  return $.ajax({
+    url: config.apiUrl + '/items',
+    method: 'POST',
+    data: {
+      item: {
+        name: data.item.name,
+        quantity: data.item.quantity,
+        location: data.location
+      }
+    },
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
+const showItems = function () {
+  return $.ajax({
+    url: config.apiUrl + '/items',
+    method: 'GET',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
 // exporting.
 module.exports = {
   signUp,
-  signIn
+  signIn,
+  newItem,
+  showItems
 }

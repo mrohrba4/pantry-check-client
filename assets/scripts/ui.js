@@ -31,10 +31,40 @@ const signInFailure = function () {
   $('form').trigger('reset')
 }
 
+// Add Item success & failure
+const newItemSuccess = function (data) {
+  console.log(data)
+  store.item = data.item
+  $('#message').text('Item Added!')
+  $('form').trigger('reset')
+}
+
+const newItemFailure = function () {
+  $('#message').text('Item Add Failed!!')
+  $('form').trigger('reset')
+}
+
+const showItemsSuccess = function (response) {
+  $('#message').text('Showing Users Items')
+  const items = response.items
+  console.log(items)
+  $('.aicon').hide()
+  $('.vicon').hide()
+  $('.sipage').show()
+  $('.test').text(`Items: \n ${JSON.stringify(items, ['name', 'quantity', 'location'], null, '\t')}`)
+}
+
+const showItemFailure = function () {
+  $('#message').text('Failed to show items')
+}
 // exporting.
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
-  signInFailure
+  signInFailure,
+  newItemSuccess,
+  newItemFailure,
+  showItemsSuccess,
+  showItemFailure
 }
