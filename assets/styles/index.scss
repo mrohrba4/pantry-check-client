@@ -74,6 +74,7 @@
 }
 .sipcon {
   display: flex;
+  height: 100%;
 }
 .aicon {
   border: black 1px solid;
@@ -119,6 +120,31 @@
 .logo {
   height: 50px;
   width: 50px;
+}
+.sipage {
+  height: 100%;
   overflow: hidden;
-
+  overflow-y: scroll;
+  position: relative;
+}
+.i1 {
+  border: black 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.i2 {
+  border: black 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.i3 {
+  border: black 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }

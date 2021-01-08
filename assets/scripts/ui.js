@@ -51,7 +51,18 @@ const showItemsSuccess = function (response) {
   $('.aicon').hide()
   $('.vicon').hide()
   $('.sipage').show()
-  $('.test').text(`Items: \n ${JSON.stringify(items, ['name', 'quantity', 'location'], null, '\t')}`)
+  // Item one
+  $('.onename').text(`Name: ${JSON.stringify(items[0].name)}`)
+  $('.oneloc').text(`Location: ${JSON.stringify(items[0].location)}`)
+  $('.onequan').text(`Quantity: ${JSON.stringify(items[0].quantity)}`)
+  // Item two
+  $('.twoname').text(`Name: ${JSON.stringify(items[1].name)}`)
+  $('.twoloc').text(`Location: ${JSON.stringify(items[1].location)}`)
+  $('.twoquan').text(`Quantity: ${JSON.stringify(items[1].quantity)}`)
+  // Item three
+  $('.threename').text(`Name: ${JSON.stringify(items[2].name)}`)
+  $('.threeloc').text(`Location: ${JSON.stringify(items[2].location)}`)
+  $('.threequan').text(`Quantity: ${JSON.stringify(items[2].quantity)}`)
 }
 
 const showItemFailure = function () {
