@@ -32,6 +32,18 @@ const signOut = function () {
   })
 }
 
+// Change Password API
+const changePassword = function (formData) {
+  return $.ajax({
+    url: config.apiUrl + '/change-password',
+    method: 'PATCH',
+    data: formData,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
 // Add Item API
 const newItem = function (data) {
   console.log(data)
@@ -68,5 +80,6 @@ module.exports = {
   signIn,
   newItem,
   showItems,
-  signOut
+  signOut,
+  changePassword
 }

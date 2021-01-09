@@ -33,6 +33,7 @@ const signInFailure = function () {
 
 // sign out success & failure
 const signOutSuccess = function () {
+  $('#message').show()
   $('#message').text('Signed Out Successfully!')
   $('.sipcon').hide()
   $('.sucon').show()
@@ -41,6 +42,20 @@ const signOutSuccess = function () {
 
 const signOutFailure = function () {
   $('#message').text('Sign Out Failed!')
+}
+
+// Change password success & failure
+const changePasswordSuccess = function () {
+  $('#message').show()
+  $('#message').text('Password Changed')
+  $('form').trigger('reset')
+  $('.cppage').hide()
+  $('.ampage').show()
+}
+
+const changePasswordFailure = function () {
+  $('#message').text('Password Change Failed!')
+  $('form').trigger('reset')
 }
 
 // Add Item success & failure
@@ -101,5 +116,7 @@ module.exports = {
   showItemsSuccess,
   showItemFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  changePasswordSuccess,
+  changePasswordFailure
 }

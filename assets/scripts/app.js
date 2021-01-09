@@ -9,12 +9,22 @@ const events = require('./events')
 $(() => {
   $('.sipcon').hide()
   $('.sipage').hide()
+  $('.ampage').hide()
+  $('.cppage').hide()
   // sign-up action
   $('#sign-up').on('submit', events.onSignUp)
   // Sign-in action.
   $('#sign-in').on('submit', events.onSignIn)
   // Sign out action
   $('#signoutsub').on('click', events.onSignOut)
+  // change password action
+  $('#changepass').on('submit', events.onChangePassword)
+  // account Manage button action
+  $('#managesub').on('click', events.onManage)
+  // account manage return button
+  $('#amr').on('click', events.onAmr)
+  // change pass page button
+  $('#cpbutton').on('click', events.onCpp)
   // Add item button action
   $('#aipb').on('click', events.onAiButton)
   // add item cancel button

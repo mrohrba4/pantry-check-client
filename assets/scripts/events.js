@@ -24,29 +24,64 @@ const onSignIn = function (event) {
     .catch(ui.signInFailure)
 }
 
+// sign out function
 const onSignOut = function (event) {
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
 }
 
+// Change password function
+const onChangePassword = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const data = getFormFields(form)
+  api.changePassword(data)
+    .then(ui.changePasswordSuccess)
+    .catch(ui.changePasswordFailure)
+}
+
+// account manage button
+const onManage = function () {
+  $('#message').hide()
+  $('.aicon').hide()
+  $('.vicon').hide()
+  $('.accon').hide()
+  $('.ampage').show()
+}
+
+// acount manage return button
+const onAmr = function () {
+  $('#message').hide()
+  $('.aicon').show()
+  $('.vicon').show()
+  $('.accon').show()
+  $('.ampage').hide()
+}
+
+// change pass page button
+const onCpp = function () {
+  $('.cppage').show()
+  $('.ampage').hide()
+}
+
+//
+
 // aisub button function
 const onAiButton = function (event) {
-  console.log('Firing')
   event.preventDefault()
   $('#message').hide()
   $('.aicon').hide()
   $('.vicon').hide()
+  $('.accon').hide()
   $('.aipage').show()
 }
 
 // Item Create function
 const onItemCreate = function (event) {
-  console.log(event)
   event.preventDefault()
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
   api.newItem(data)
     .then(ui.newItemSuccess)
     .then(ui.newItemFailure)
@@ -57,6 +92,7 @@ const onArButton = function () {
   $('#message').hide()
   $('.aicon').show()
   $('.vicon').show()
+  $('.accon').show()
   $('.aipage').hide()
 }
 
@@ -84,5 +120,9 @@ module.exports = {
   onShowItems,
   onArButton,
   onVrButton,
-  onSignOut
+  onSignOut,
+  onManage,
+  onCpp,
+  onChangePassword,
+  onAmr
 }

@@ -51,6 +51,29 @@
                       <button id="managesub">Manage</button>
                       <button id="signoutsub">Sign Out</button>
                     </div>
+                    <!-- Account Manage Page -->
+                    <div class="ampage col-md-12">
+                      <h3 class="amlabel">Manage your account:</h3>
+                      <button id="cpbutton">Change Password</button>
+                      <button id="amr">Return</button>
+                    </div>
+                    <!-- Change password page -->
+                    <div class="cppage">
+                      <h3 class="cplabel">Change your Password</h3>
+                      <form id="changepass" class="flex-column">
+                        <input class="cp1"
+                          name="passwords[old]"
+                          type="password"
+                          placeholder="Old Password"
+                        />
+                        <input class="cp1"
+                          name="passwords[new]"
+                          type="password"
+                          placeholder="New Password"
+                        />
+                        <button id="cpfbutton" class="cp1" type="submit">Submit</button>
+                      </form>
+                    </div>
                     <!-- Add items page -->
                     <div class="aipage col-md-12">
                       <p class="ailabel">Add your item below</p>
