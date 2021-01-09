@@ -21,6 +21,17 @@ const signIn = function (formData) {
   })
 }
 
+// sign-out api
+const signOut = function () {
+  return $.ajax({
+    url: config.apiUrl + '/sign-out',
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
 // Add Item API
 const newItem = function (data) {
   console.log(data)
@@ -40,6 +51,7 @@ const newItem = function (data) {
   })
 }
 
+// Show items api
 const showItems = function () {
   return $.ajax({
     url: config.apiUrl + '/items',
@@ -55,5 +67,6 @@ module.exports = {
   signUp,
   signIn,
   newItem,
-  showItems
+  showItems,
+  signOut
 }

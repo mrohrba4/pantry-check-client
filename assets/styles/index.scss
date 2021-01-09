@@ -2,7 +2,10 @@
 
 // body
 body {
-  background-image: url('public/bodyimage1.jpg')
+  background-image: url('public/bodyimage1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
 // logo image
 .logo {
@@ -120,6 +123,18 @@ body {
 
 // view/show item container
 .vicon {
+  background-color: rgba(86, 128, 233, 0.9);
+  box-shadow: 5px 10px 5px;
+  border: black 1px solid;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+// Account container
+.accon {
   background-color: rgba(86, 128, 233, 0.9);
   box-shadow: 5px 10px 5px;
   border: black 1px solid;

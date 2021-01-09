@@ -31,6 +31,18 @@ const signInFailure = function () {
   $('form').trigger('reset')
 }
 
+// sign out success & failure
+const signOutSuccess = function () {
+  $('#message').text('Signed Out Successfully!')
+  $('.sipcon').hide()
+  $('.sucon').show()
+  $('.sicon').show()
+}
+
+const signOutFailure = function () {
+  $('#message').text('Sign Out Failed!')
+}
+
 // Add Item success & failure
 const newItemSuccess = function (data) {
   console.log(data)
@@ -51,6 +63,7 @@ const showItemsSuccess = function (response) {
   console.log(items)
   $('.aicon').hide()
   $('.vicon').hide()
+  $('.accon').hide()
   $('.sipage').show()
   // Item one
   $('.onename').text(`Name: ${JSON.stringify(items[0].name)}`)
@@ -86,5 +99,7 @@ module.exports = {
   newItemSuccess,
   newItemFailure,
   showItemsSuccess,
-  showItemFailure
+  showItemFailure,
+  signOutSuccess,
+  signOutFailure
 }

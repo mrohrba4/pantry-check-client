@@ -13,6 +13,8 @@ $(() => {
   $('#sign-up').on('submit', events.onSignUp)
   // Sign-in action.
   $('#sign-in').on('submit', events.onSignIn)
+  // Sign out action
+  $('#signoutsub').on('click', events.onSignOut)
   // Add item button action
   $('#aipb').on('click', events.onAiButton)
   // add item cancel button

@@ -24,6 +24,12 @@ const onSignIn = function (event) {
     .catch(ui.signInFailure)
 }
 
+const onSignOut = function (event) {
+  api.signOut()
+    .then(ui.signOutSuccess)
+    .catch(ui.signOutFailure)
+}
+
 // aisub button function
 const onAiButton = function (event) {
   console.log('Firing')
@@ -34,6 +40,7 @@ const onAiButton = function (event) {
   $('.aipage').show()
 }
 
+// Item Create function
 const onItemCreate = function (event) {
   console.log(event)
   event.preventDefault()
@@ -45,6 +52,7 @@ const onItemCreate = function (event) {
     .then(ui.newItemFailure)
 }
 
+// Add item return/cancel button
 const onArButton = function () {
   $('#message').hide()
   $('.aicon').show()
@@ -52,16 +60,18 @@ const onArButton = function () {
   $('.aipage').hide()
 }
 
+// Show items function
 const onShowItems = function () {
   api.showItems()
     .then(ui.showItemsSuccess)
     .then(ui.showItemsFailure)
 }
-
+// Show items cancel/return button
 const onVrButton = function () {
   $('#message').hide()
   $('.aicon').show()
   $('.vicon').show()
+  $('.accon').show()
   $('.sipage').hide()
 }
 
@@ -73,5 +83,6 @@ module.exports = {
   onItemCreate,
   onShowItems,
   onArButton,
-  onVrButton
+  onVrButton,
+  onSignOut
 }
