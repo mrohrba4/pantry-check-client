@@ -36,6 +36,7 @@ const newItemSuccess = function (data) {
   console.log(data)
   store.item = data.item
   $('#message').text('Item Added!')
+  $('.ailabel').text('Item Added!')
   $('form').trigger('reset')
 }
 
@@ -63,6 +64,14 @@ const showItemsSuccess = function (response) {
   $('.threename').text(`Name: ${JSON.stringify(items[2].name)}`)
   $('.threeloc').text(`Location: ${JSON.stringify(items[2].location)}`)
   $('.threequan').text(`Quantity: ${JSON.stringify(items[2].quantity)}`)
+  // Item four
+  $('.fourname').text(`Name: ${JSON.stringify(items[3].name)}`)
+  $('.fourloc').text(`Location: ${JSON.stringify(items[3].location)}`)
+  $('.fourquan').text(`Quantity: ${JSON.stringify(items[3].quantity)}`)
+  // Item five
+  $('.fivename').text(`Name: ${JSON.stringify(items[4].name)}`)
+  $('.fiveloc').text(`Location: ${JSON.stringify(items[4].location)}`)
+  $('.fivequan').text(`Quantity: ${JSON.stringify(items[4].quantity)}`)
 }
 
 const showItemFailure = function () {

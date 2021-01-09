@@ -1,50 +1,71 @@
 @import '~bootstrap/scss/bootstrap';
 
-// html {
-//   height: 100%;
-// }
-// body {
-//   min-height: 100%;
-// }
+// body
+body {
+  background-image: url('public/bodyimage1.jpg')
+}
+// logo image
+.logo {
+  height: inherit;
+  // width: 50px;
+}
+// main page container
 .container-fluid {
   width: 100%;
   height: 100vh;
   display: flex-column;
   align-content: stretch;
 }
+// navigation row
 .nvr {
   height: 15vh;
 }
+// navigation bar/column
 .navbar {
+  background-color: rgba(86, 128, 233, 0.9);
+  box-shadow: 5px 10px 5px;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 15vh;
 }
+// basic rows.
 .row {
   border: black 1px solid;
   margin: 10px;
 }
-// .mc {
-//   height: 33vh;
-// }
-// .mc2 {
-//   height: 40vh;
-// }
+// Title text
+.title {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// Subtitle text
+.subtitle {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// main content container
 .main {
   display: flex;
   position: relative;
   height: 80vh;
 }
-.signs {
-  border: black 1px solid;
-}
+
+// alert messages
 #message {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+// sign in form container
 .sicon {
+  background-color: rgba(86, 128, 233, 0.9);
+  box-shadow: 5px 10px 5px;
   border: black 1px solid;
   display: flex;
   flex-direction: column;
@@ -53,12 +74,18 @@
   align-items: center;
   justify-content: center;
 }
+// sign in form
 .si1 {
   display: flex;
   flex-direction: column;
   margin: 5px;
+  text-decoration: underline;
 }
+
+// sign up from container
 .sucon {
+  background-color: rgba(86, 128, 233, 0.9);
+  box-shadow: 5px 10px 5px;
   border: black 1px solid;
   display: flex;
   flex-direction: column;
@@ -67,16 +94,22 @@
   align-items: center;
   justify-content: center;
 }
+// sign up form
 .su1 {
   display: flex;
   flex-direction: column;
   margin: 5px;
+  text-decoration: underline;
 }
+// signed in page container
 .sipcon {
   display: flex;
   height: 100%;
 }
+// Add item container
 .aicon {
+  background-color: rgba(86, 128, 233, 0.9);
+  box-shadow: 5px 10px 5px;
   border: black 1px solid;
   margin: 5px;
   display: flex;
@@ -84,7 +117,11 @@
   align-items: center;
   justify-content: center;
 }
+
+// view/show item container
 .vicon {
+  background-color: rgba(86, 128, 233, 0.9);
+  box-shadow: 5px 10px 5px;
   border: black 1px solid;
   margin: 5px;
   display: flex;
@@ -92,41 +129,51 @@
   align-items: center;
   justify-content: center;
 }
+
+// add items page
 .aipage {
+  background-color: rgba(86, 128, 233, 0.9);
+  box-shadow: 5px 10px 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+// add items label
 .ailabel {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+// add item inputs and button
 .ai1 {
   margin: 5px;
 }
+
+// add items form id
 #additem {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+// "location" drop down menu width
 #location {
   width: 175px;
 }
+// footer row
 .ft {
   height: 10vh;
 }
-.logo {
-  height: 50px;
-  width: 50px;
-}
+// Show/view items page.
 .sipage {
+  background-color: rgba(86, 128, 233, 0.9);
+  box-shadow: 5px 10px 5px;
   height: 100%;
   overflow: hidden;
   overflow-y: scroll;
   position: relative;
 }
+// item 1
 .i1 {
   border: black 1px solid;
   display: flex;
@@ -134,6 +181,7 @@
   justify-content: center;
   flex-direction: column;
 }
+// item 2
 .i2 {
   border: black 1px solid;
   display: flex;
@@ -141,10 +189,33 @@
   justify-content: center;
   flex-direction: column;
 }
+// item 3
 .i3 {
   border: black 1px solid;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+// item 4
+.i4 {
+  border: black 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+// item 5
+.i5 {
+  border: black 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+// show/view items cancel button
+.vi1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

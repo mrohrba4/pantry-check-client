@@ -45,10 +45,24 @@ const onItemCreate = function (event) {
     .then(ui.newItemFailure)
 }
 
+const onArButton = function () {
+  $('#message').hide()
+  $('.aicon').show()
+  $('.vicon').show()
+  $('.aipage').hide()
+}
+
 const onShowItems = function () {
   api.showItems()
     .then(ui.showItemsSuccess)
     .then(ui.showItemsFailure)
+}
+
+const onVrButton = function () {
+  $('#message').hide()
+  $('.aicon').show()
+  $('.vicon').show()
+  $('.sipage').hide()
 }
 
 // exporting.
@@ -57,5 +71,7 @@ module.exports = {
   onSignIn,
   onAiButton,
   onItemCreate,
-  onShowItems
+  onShowItems,
+  onArButton,
+  onVrButton
 }

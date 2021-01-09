@@ -13,6 +13,7 @@
     </head>
     <!-- Main Body -->
     <body>
+      <!-- <img class="bi1" src="public/bodyimage1.jpg" alt="logo"> -->
       <!-- Main Container -->
       <div class="container-fluid">
         <!-- Nav bar Row -->
@@ -26,6 +27,12 @@
         	<div class="mc row">
             <!-- Main content col -->
         		<div class="mc2 col-md-12">
+              <div class="title">
+                <h1>Welcome to Pantry Check</h1>
+              </div>
+              <div class="subtitle">
+                <h5>Never guess if you have groceries or supplies again!</h5>
+              </div>
               <!-- Alert message -->
               <p id="message"></p>
               <!-- main display Div -->
@@ -42,7 +49,7 @@
                     </div>
                     <!-- Add items page -->
                     <div class="aipage col-md-12">
-                      <p class="ailabel">add items page</p>
+                      <p class="ailabel">Add your item below</p>
                       <form id="additem" class="flex-column">
                         <input class="ai1"
                           name="item[name]"
@@ -62,6 +69,7 @@
                         </select>
                         <button id="aisubmit" class="ai1" type="submit">Add Item!</button>
                       </form>
+                      <button id="aireturn" class="ai1">Cancel</button>
                     </div>
                     <!-- Show items page -->
                     <div class="sipage col-md-12">
@@ -71,6 +79,7 @@
                         <p class="onename"></p>
                         <p class="oneloc"></p>
                         <p class="onequan"></p>
+
                       </div>
                       <!-- Item two placeholder -->
                       <div class="i2">
@@ -86,11 +95,26 @@
                         <p class="threeloc"></p>
                         <p class="threequan"></p>
                       </div>
+                      <!-- Item four placeholder -->
+                      <div class="i4">
+                        <p class="i4label">Item 4:</p>
+                        <p class="fourname"></p>
+                        <p class="fourloc"></p>
+                        <p class="fourquan"></p>
+                      </div>
+                      <!-- Item five placeholder -->
+                      <div class="i5">
+                        <p class="i5label">Item 5:</p>
+                        <p class="fivename"></p>
+                        <p class="fiveloc"></p>
+                        <p class="fivequan"></p>
+                      </div>
+                      <button id="vireturn" class="vi1">Cancel</button>
                     </div>
               		</div>
                 <!-- Sign in Div -->
         				<div class="sicon col-md-6">
-                  <p class="si1">Sign in</p>
+                  <h4 class="si1">Sign in</h4>
                   <!-- Sign in Form -->
                   <form id="sign-in">
                     <input class="si1"
@@ -108,7 +132,7 @@
         				</div>
                 <!-- Sign up Div -->
         				<div class="sucon col-md-6">
-                  <p class="su1">Sign up</p>
+                  <h4 class="su1">Sign up</h4>
                   <!-- Sign up Form -->
                   <form id="sign-up">
                     <input class="su1"

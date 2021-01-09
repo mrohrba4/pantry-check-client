@@ -15,8 +15,12 @@ $(() => {
   $('#sign-in').on('submit', events.onSignIn)
   // Add item button action
   $('#aipb').on('click', events.onAiButton)
+  // add item cancel button
+  $('#aireturn').on('click', events.onArButton)
   // create or Add new item
   $('#additem').on('submit', events.onItemCreate)
   // show items
   $('#visub').on('click', events.onShowItems)
+  // show items cancel/return
+  $('#vireturn').on('click', events.onVrButton)
 })
