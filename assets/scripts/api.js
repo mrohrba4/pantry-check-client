@@ -3,6 +3,8 @@
 const config = require('./config')
 const store = require('./store')
 
+// AUTH #####################
+
 // sign-up API
 const signUp = function (formData) {
   return $.ajax({
@@ -11,7 +13,6 @@ const signUp = function (formData) {
     data: formData
   })
 }
-
 // sign in API
 const signIn = function (formData) {
   return $.ajax({
@@ -20,7 +21,6 @@ const signIn = function (formData) {
     data: formData
   })
 }
-
 // sign-out api
 const signOut = function () {
   return $.ajax({
@@ -31,7 +31,6 @@ const signOut = function () {
     }
   })
 }
-
 // Change Password API
 const changePassword = function (formData) {
   return $.ajax({
@@ -43,6 +42,8 @@ const changePassword = function (formData) {
     }
   })
 }
+
+// RESOURCE ####################
 
 // Add Item API
 const newItem = function (data) {
@@ -62,7 +63,6 @@ const newItem = function (data) {
     }
   })
 }
-
 // Show items api
 const showItems = function () {
   return $.ajax({

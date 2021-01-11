@@ -7,10 +7,17 @@ const events = require('./events')
 // require('./example')
 
 $(() => {
+  // initial hide
   $('.sipcon').hide()
   $('.sipage').hide()
   $('.ampage').hide()
   $('.cppage').hide()
+  $('.uicon').hide()
+  $('.dicon').hide()
+  $('.deletecon').hide()
+
+  // AUTH #############
+
   // sign-up action
   $('#sign-up').on('submit', events.onSignUp)
   // Sign-in action.
@@ -19,20 +26,32 @@ $(() => {
   $('#signoutsub').on('click', events.onSignOut)
   // change password action
   $('#changepass').on('submit', events.onChangePassword)
+
+  // BUTTONS #######################
+
   // account Manage button action
   $('#managesub').on('click', events.onManage)
   // account manage return button
   $('#amr').on('click', events.onAmr)
   // change pass page button
   $('#cpbutton').on('click', events.onCpp)
-  // Add item button action
+  // manage items main page button
+  $('#mainitemspb').on('click', events.onMip)
+  // Add item page button
   $('#aipb').on('click', events.onAiButton)
   // add item cancel button
   $('#aireturn').on('click', events.onArButton)
+  // show items cancel/return
+  $('#vireturn').on('click', events.onVrButton)
+  // delete item page button(loads the delete item page.)
+  $('#dipsub').on('click', events.onDipSub)
+
+  // RESOURCE MANIPULATION ####################
+
   // create or Add new item
   $('#additem').on('submit', events.onItemCreate)
   // show items
   $('#visub').on('click', events.onShowItems)
-  // show items cancel/return
-  $('#vireturn').on('click', events.onVrButton)
+  // Delete item 1
+  $('#im1dbutton').on('click', events.onI1Destroy)
 })

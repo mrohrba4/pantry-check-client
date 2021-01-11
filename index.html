@@ -26,9 +26,11 @@
         	<div class="mc row">
             <!-- Main content col -->
         		<div class="mc2 col-md-12">
+              <!-- Main page title -->
               <div class="title">
                 <h1>Welcome to Pantry Check</h1>
               </div>
+              <!-- Main page subtitle -->
               <div class="subtitle">
                 <h5>Never guess if you have groceries or supplies again!</h5>
               </div>
@@ -38,28 +40,97 @@
         			<div class="main row">
               		<div class="sipcon col-md-12">
                     <!-- Signed In Page -->
-                    <div class="aicon col-md-6">
-                      <p>Add Items</p>
-                      <button id="aipb">Add Items</button>
+
+                    <!-- Manage items container -->
+                    <div class="itemscon col-md-6">
+                      <!-- Manage items label -->
+                      <p>Manage Items</p>
+                      <!-- Manage items button -->
+                      <button id="mainitemspb">Items</button>
                     </div>
-                    <div class="vicon col-md-6">
-                      <p>Show Items</p>
-                      <button id="visub">Show Items</button>
-                    </div>
+                    <!-- Manage Account Container -->
                     <div class="accon col-md-6">
+                      <!-- Manage Account label -->
                       <p>Account</p>
+                      <!-- Manage Account page button -->
                       <button id="managesub">Manage</button>
+                      <!-- Sign out button -->
                       <button id="signoutsub">Sign Out</button>
                     </div>
+
+
+                    <!-- Items page -->
+
+                    <!-- Add items container -->
+                    <div class="aicon col-md-4">
+                      <!-- Add items label -->
+                      <p>Add Items</p>
+                      <!-- Add items page button -->
+                      <button id="aipb">Add</button>
+                    </div>
+                    <!-- View Items Container -->
+                    <div class="vicon col-md-4">
+                      <!-- Show items label -->
+                      <p>Show Items</p>
+                      <!-- Show items page button -->
+                      <button id="visub">Show</button>
+                    </div>
+                    <!-- Update Items Container -->
+                    <div  class="uicon col-md-4">
+                      <!-- Update Items container label -->
+                      <p>Update Items</p>
+                      <!-- update items page button -->
+                      <button id="uipsub">Update</button>
+                    </div>
+                    <!-- Delete Items Container -->
+                    <div  class="dicon col-md-4">
+                      <!-- Delete items container label -->
+                      <p>Delete Items</p>
+                      <!-- Delete items page button -->
+                      <button id="dipsub">Delete</button>
+                    </div>
+
+
+                    <!-- Delete page -->
+
+                    <!-- Delete Container -->
+                    <div  class="deletecon col-md-4">
+                      <!-- Delete items label -->
+                      <p>Delete Items</p>
+                      <!-- Delete item form -->
+                      <form id="deleteform" class="flex-column">
+                        <select name="ditemselect" id="dselect">
+                          <option value="item1">Item 1</option>
+                          <option value="item2">Item 2</option>
+                          <option value="item3">Item 3</option>
+                          <option value="item4">Item 4</option>
+                          <option value="item5">Item 5</option>
+                        </select>
+                        <button id="dfbsub">Delete</button>
+                      </form>
+                    </div>
+
+
                     <!-- Account Manage Page -->
+
+                    <!-- Account Manage Container -->
                     <div class="ampage col-md-12">
+                      <!-- Account manage label -->
                       <h3 class="amlabel">Manage your account:</h3>
+                      <!-- Change password button -->
                       <button id="cpbutton">Change Password</button>
+                      <!-- Return to home button -->
                       <button id="amr">Return</button>
                     </div>
-                    <!-- Change password page -->
+
+
+                    <!-- Change Password Page -->
+
+                    <!-- Change password container -->
                     <div class="cppage">
+                      <!-- Change password page label -->
                       <h3 class="cplabel">Change your Password</h3>
+                      <!-- Change password form -->
                       <form id="changepass" class="flex-column">
                         <input class="cp1"
                           name="passwords[old]"
@@ -74,9 +145,15 @@
                         <button id="cpfbutton" class="cp1" type="submit">Submit</button>
                       </form>
                     </div>
-                    <!-- Add items page -->
+
+
+                    <!-- Add Items Page -->
+
+                    <!-- Add items container -->
                     <div class="aipage col-md-12">
+                      <!-- Add item page label -->
                       <p class="ailabel">Add your item below</p>
+                      <!-- Add item form -->
                       <form id="additem" class="flex-column">
                         <input class="ai1"
                           name="item[name]"
@@ -96,9 +173,14 @@
                         </select>
                         <button id="aisubmit" class="ai1" type="submit">Add Item!</button>
                       </form>
+                      <!-- Return home button -->
                       <button id="aireturn" class="ai1">Cancel</button>
                     </div>
-                    <!-- Show items page -->
+
+
+                    <!-- Show Item Page -->
+
+                    <!-- Show items container -->
                     <div class="sipage col-md-12">
                       <!-- Item one placeholder -->
                       <div class="i1">
@@ -106,7 +188,7 @@
                         <p class="onename"></p>
                         <p class="oneloc"></p>
                         <p class="onequan"></p>
-
+                        <button id="i1mbutton" class="imb">Edit</button>
                       </div>
                       <!-- Item two placeholder -->
                       <div class="i2">
@@ -114,6 +196,7 @@
                         <p class="twoname"></p>
                         <p class="twoloc"></p>
                         <p class="twoquan"></p>
+                        <button id="i2mbutton" class="imb">Edit</button>
                       </div>
                       <!-- Item three placeholder -->
                       <div class="i3">
@@ -121,6 +204,7 @@
                         <p class="threename"></p>
                         <p class="threeloc"></p>
                         <p class="threequan"></p>
+                        <button id="i3mbutton" class="imb">Edit</button>
                       </div>
                       <!-- Item four placeholder -->
                       <div class="i4">
@@ -128,6 +212,7 @@
                         <p class="fourname"></p>
                         <p class="fourloc"></p>
                         <p class="fourquan"></p>
+                        <button id="i4mbutton" class="imb">Edit</button>
                       </div>
                       <!-- Item five placeholder -->
                       <div class="i5">
@@ -135,12 +220,17 @@
                         <p class="fivename"></p>
                         <p class="fiveloc"></p>
                         <p class="fivequan"></p>
+                        <button id="i5mbutton" class="imb">Edit</button>
                       </div>
                       <button id="vireturn" class="vi1">Return</button>
                     </div>
+
+
               		</div>
-                <!-- Sign in Div -->
+
+                <!-- Sign in Container -->
         				<div class="sicon col-md-6">
+                  <!-- Sign in con label -->
                   <h4 class="si1">Sign in</h4>
                   <!-- Sign in Form -->
                   <form id="sign-in">
@@ -157,8 +247,11 @@
                     <button class="sibutton si1" type="submit">Submit</button>
                   </form>
         				</div>
-                <!-- Sign up Div -->
+
+
+                <!-- Sign up Container -->
         				<div class="sucon col-md-6">
+                  <!-- Sign up con label -->
                   <h4 class="su1">Sign up</h4>
                   <!-- Sign up Form -->
                   <form id="sign-up">
@@ -180,10 +273,12 @@
                     <button class="subutton su1" type="submit">Submit</button>
                   </form>
         				</div>
+
+
         			</div>
         		</div>
         	</div>
-          <!-- Footer Ror -->
+          <!-- Footer Row -->
         	<div class="ft row">
             <!-- Footer col -->
         		<div class="col-md-12">

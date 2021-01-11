@@ -1,12 +1,13 @@
 
 const store = require('./store')
 
+// AUTH #################
+
 // sign up success & failure.
 const signUpSuccess = function (response) {
   $('#message').text('Signed Up Successfully!')
   $('form').trigger('reset')
 }
-
 const signUpFailure = function () {
   $('#message').text('Sign Up Failed!')
   $('form').trigger('reset')
@@ -24,8 +25,9 @@ const signInSuccess = function (response) {
   $('.sipcon').show()
   // hide add items page.
   $('.aipage').hide()
+  $('.aicon').hide()
+  $('.vicon').hide()
 }
-
 const signInFailure = function () {
   $('#message').text('Sign In Failed!')
   $('form').trigger('reset')
@@ -39,7 +41,6 @@ const signOutSuccess = function () {
   $('.sucon').show()
   $('.sicon').show()
 }
-
 const signOutFailure = function () {
   $('#message').text('Sign Out Failed!')
 }
@@ -52,11 +53,12 @@ const changePasswordSuccess = function () {
   $('.cppage').hide()
   $('.ampage').show()
 }
-
 const changePasswordFailure = function () {
   $('#message').text('Password Change Failed!')
   $('form').trigger('reset')
 }
+
+// RESOURCE ###############
 
 // Add Item success & failure
 const newItemSuccess = function (data) {
@@ -66,12 +68,12 @@ const newItemSuccess = function (data) {
   $('.ailabel').text('Item Added!')
   $('form').trigger('reset')
 }
-
 const newItemFailure = function () {
   $('#message').text('Item Add Failed!!')
   $('form').trigger('reset')
 }
 
+// Show Item Success & Failure
 const showItemsSuccess = function (response) {
   $('#message').text('Showing Users Items')
   const items = response.items
@@ -101,10 +103,10 @@ const showItemsSuccess = function (response) {
   $('.fiveloc').text(`Location: ${JSON.stringify(items[4].location)}`)
   $('.fivequan').text(`Quantity: ${JSON.stringify(items[4].quantity)}`)
 }
-
 const showItemFailure = function () {
   $('#message').text('Failed to show items')
 }
+
 // exporting.
 module.exports = {
   signUpSuccess,

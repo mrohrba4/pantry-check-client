@@ -4,7 +4,9 @@ const api = require('./api')
 const ui = require('./ui')
 const getFormFields = require('./../../lib/get-form-fields.js')
 
-// sign up function
+// AUTH ##################
+
+// Sign Up function
 const onSignUp = function (event) {
   event.preventDefault()
   const form = event.target
@@ -13,8 +15,7 @@ const onSignUp = function (event) {
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
 }
-
-// sign in function
+// Sign In function
 const onSignIn = function (event) {
   event.preventDefault()
   const form = event.target
@@ -23,15 +24,13 @@ const onSignIn = function (event) {
     .then(ui.signInSuccess)
     .catch(ui.signInFailure)
 }
-
-// sign out function
+// Sign Out function
 const onSignOut = function (event) {
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
 }
-
-// Change password function
+// Change Password function
 const onChangePassword = function (event) {
   event.preventDefault()
   const form = event.target
@@ -41,7 +40,9 @@ const onChangePassword = function (event) {
     .catch(ui.changePasswordFailure)
 }
 
-// account manage button
+// BUTTONS ############
+
+// Account Manage button
 const onManage = function () {
   $('#message').hide()
   $('.aicon').hide()
@@ -49,8 +50,7 @@ const onManage = function () {
   $('.accon').hide()
   $('.ampage').show()
 }
-
-// acount manage return button
+// Account manage return button
 const onAmr = function () {
   $('#message').hide()
   $('.aicon').show()
@@ -58,16 +58,12 @@ const onAmr = function () {
   $('.accon').show()
   $('.ampage').hide()
 }
-
-// change pass page button
+// Change Pass page button
 const onCpp = function () {
   $('.cppage').show()
   $('.ampage').hide()
 }
-
-//
-
-// aisub button function
+// Add Item Page button function
 const onAiButton = function (event) {
   event.preventDefault()
   $('#message').hide()
@@ -76,31 +72,13 @@ const onAiButton = function (event) {
   $('.accon').hide()
   $('.aipage').show()
 }
-
-// Item Create function
-const onItemCreate = function (event) {
-  event.preventDefault()
-  const form = event.target
-  const data = getFormFields(form)
-  api.newItem(data)
-    .then(ui.newItemSuccess)
-    .then(ui.newItemFailure)
-}
-
-// Add item return/cancel button
+// Add Item return/cancel button
 const onArButton = function () {
   $('#message').hide()
   $('.aicon').show()
   $('.vicon').show()
   $('.accon').show()
   $('.aipage').hide()
-}
-
-// Show items function
-const onShowItems = function () {
-  api.showItems()
-    .then(ui.showItemsSuccess)
-    .then(ui.showItemsFailure)
 }
 // Show items cancel/return button
 const onVrButton = function () {
@@ -110,8 +88,46 @@ const onVrButton = function () {
   $('.accon').show()
   $('.sipage').hide()
 }
+// Manage items page button
+const onMip = function () {
+  $('#message').show()
+  $('#message').text('Manage User Items')
+  $('.aicon').show()
+  $('.vicon').show()
+  $('.uicon').show()
+  $('.dicon').show()
+  $('.itemscon').hide()
+  $('.accon').hide()
+}
+// Delete Item Page Button
+const onDipSub = function () {
+  $('#message').hide()
+  $('.aicon').hide()
+  $('.vicon').hide()
+  $('.uicon').hide()
+  $('.dicon').hide()
+  $('.deletecon').show()
+}
 
-// exporting.
+// RESOURCE #################
+
+// Add Item Create function
+const onItemCreate = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const data = getFormFields(form)
+  api.newItem(data)
+    .then(ui.newItemSuccess)
+    .then(ui.newItemFailure)
+}
+// Show items function
+const onShowItems = function () {
+  api.showItems()
+    .then(ui.showItemsSuccess)
+    .then(ui.showItemsFailure)
+}
+
+// Exporting.
 module.exports = {
   onSignUp,
   onSignIn,
@@ -124,5 +140,7 @@ module.exports = {
   onManage,
   onCpp,
   onChangePassword,
-  onAmr
+  onAmr,
+  onMip,
+  onDipSub
 }

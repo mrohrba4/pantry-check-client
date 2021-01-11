@@ -1,16 +1,19 @@
 @import '~bootstrap/scss/bootstrap';
 
+// MAIN HTML ######
+
 // body
 body {
   background-image: url('public/bodyimage1.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
+  width: auto;
 }
-// logo image
-.logo {
-  height: inherit;
-  // width: 50px;
+// basic rows.
+.row {
+  border: black 1px solid;
+  margin: 10px;
 }
 // main page container
 .container-fluid {
@@ -32,11 +35,6 @@ body {
   justify-content: center;
   height: 15vh;
 }
-// basic rows.
-.row {
-  border: black 1px solid;
-  margin: 10px;
-}
 // Title text
 .title {
   color: black;
@@ -51,12 +49,22 @@ body {
   align-items: center;
   justify-content: center;
 }
-// main content container
-.main {
-  display: flex;
-  position: relative;
-  height: 80vh;
+// footer row
+.ft {
+  height: 10vh;
 }
+
+
+// IMAGES #######
+
+// logo image
+.logo {
+  height: inherit;
+  // width: 50px;
+}
+
+
+// MESSAGE #######
 
 // alert messages
 #message {
@@ -65,6 +73,15 @@ body {
   justify-content: center;
 }
 
+
+// CONTAINERS #########
+
+// main content container
+.main {
+  display: flex;
+  position: relative;
+  height: 80vh;
+}
 // sign in form container
 .sicon {
   background-color: rgba(86, 128, 233, 0.9);
@@ -77,14 +94,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-// sign in form
-.si1 {
-  display: flex;
-  flex-direction: column;
-  margin: 5px;
-  text-decoration: underline;
-}
-
 // sign up from container
 .sucon {
   background-color: rgba(86, 128, 233, 0.9);
@@ -97,13 +106,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-// sign up form
-.su1 {
-  display: flex;
-  flex-direction: column;
-  margin: 5px;
-  text-decoration: underline;
-}
 // signed in page container
 .sipcon {
   display: flex;
@@ -114,13 +116,12 @@ body {
   background-color: rgba(86, 128, 233, 0.9);
   box-shadow: 5px 10px 5px;
   border: black 1px solid;
-  margin: 5px;
+  margin: 5px 5px 5px -10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-
 // view/show item container
 .vicon {
   background-color: rgba(86, 128, 233, 0.9);
@@ -132,7 +133,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 // Account container
 .accon {
   background-color: rgba(86, 128, 233, 0.9);
@@ -144,6 +144,72 @@ body {
   align-items: center;
   justify-content: center;
 }
+// Main items manage container
+.itemscon {
+  background-color: rgba(86, 128, 233, 0.9);
+  box-shadow: 5px 10px 5px;
+  border: black 1px solid;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+// update items container
+.uicon {
+  background-color: rgba(86, 128, 233, 0.9);
+  box-shadow: 5px 10px 5px;
+  border: black 1px solid;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+// Delete items container
+.dicon {
+  background-color: rgba(86, 128, 233, 0.9);
+  box-shadow: 5px 10px 5px;
+  border: black 1px solid;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+// FORMS ########
+
+// sign in form
+.si1 {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  text-decoration: underline;
+}
+// sign up form
+.su1 {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  text-decoration: underline;
+}
+// add items form id
+#additem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// change pass form
+#changepass {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+// PAGES ########
 
 // add items page
 .aipage {
@@ -154,31 +220,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-// add items label
-.ailabel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-// add item inputs and button
-.ai1 {
-  margin: 5px;
-}
-
-// add items form id
-#additem {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-// "location" drop down menu width
-#location {
-  width: 175px;
-}
-// footer row
-.ft {
-  height: 10vh;
-}
 // Show/view items page.
 .sipage {
   background-color: rgba(86, 128, 233, 0.9);
@@ -187,6 +228,56 @@ body {
   overflow: hidden;
   overflow-y: scroll;
   position: relative;
+}
+// Account manage page
+.ampage {
+  background-color: rgba(86, 128, 233, 0.9);
+  box-shadow: 5px 10px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+// Change Password Page
+.cppage {
+  background-color: rgba(86, 128, 233, 0.9);
+  box-shadow: 5px 10px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+// LABELS AND BUTTONS ######
+
+// add items label
+.ailabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// show/view items cancel button
+.vi1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+// MISC ######
+
+// add item inputs and button
+.ai1 {
+  margin: 5px;
+}
+// change pass inputs/button
+.cp1 {
+  margin: 5px;
+}
+// "location" drop down menu width
+#location {
+  width: 175px;
 }
 // item 1
 .i1 {
@@ -227,41 +318,4 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-// show/view items cancel button
-.vi1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-// Account manage page
-.ampage {
-  background-color: rgba(86, 128, 233, 0.9);
-  box-shadow: 5px 10px 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-// Change Password Page
-.cppage {
-  background-color: rgba(86, 128, 233, 0.9);
-  box-shadow: 5px 10px 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-// change pass form
-#changepass {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-// change pass inputs/button
-.cp1 {
-  margin: 5px;
 }
