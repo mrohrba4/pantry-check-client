@@ -48,6 +48,7 @@ const changePassword = function (formData) {
 // Add Item API
 const newItem = function (data) {
   console.log(data)
+
   return $.ajax({
     url: config.apiUrl + '/items',
     method: 'POST',
@@ -74,6 +75,16 @@ const showItems = function () {
   })
 }
 
+const destroy = function (id) {
+  console.log(id)
+  return $.ajax({
+    url: config.apiUrl + '/items/' + id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
 // exporting.
 module.exports = {
   signUp,
@@ -81,5 +92,6 @@ module.exports = {
   newItem,
   showItems,
   signOut,
-  changePassword
+  changePassword,
+  destroy
 }

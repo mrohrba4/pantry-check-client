@@ -70,6 +70,8 @@ const onAiButton = function (event) {
   $('.aicon').hide()
   $('.vicon').hide()
   $('.accon').hide()
+  $('.dicon').hide()
+  $('.uicon').hide()
   $('.aipage').show()
 }
 // Add Item return/cancel button
@@ -77,7 +79,9 @@ const onArButton = function () {
   $('#message').hide()
   $('.aicon').show()
   $('.vicon').show()
-  $('.accon').show()
+  $('.dicon').show()
+  $('.uicon').show()
+  $('.accon').hide()
   $('.aipage').hide()
 }
 // Show items cancel/return button
@@ -85,7 +89,9 @@ const onVrButton = function () {
   $('#message').hide()
   $('.aicon').show()
   $('.vicon').show()
-  $('.accon').show()
+  $('.uicon').show()
+  $('.dicon').show()
+  $('.accon').hide()
   $('.sipage').hide()
 }
 // Manage items page button
@@ -106,7 +112,7 @@ const onDipSub = function () {
   $('.vicon').hide()
   $('.uicon').hide()
   $('.dicon').hide()
-  $('.deletecon').show()
+  $('.deletepage').show()
 }
 
 // RESOURCE #################
@@ -127,6 +133,19 @@ const onShowItems = function () {
     .then(ui.showItemsFailure)
 }
 
+const onDestroy = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  const item = data.item
+  console.log(item)
+  if (item.id.length !== 0) {
+    api.destroy(item.id)
+      .then(ui.onDeleteSuccess)
+      .catch(ui.onDeleteFailure)
+  } else {
+    $('#message').text('An Error Has Occured!')
+  }
+}
 // Exporting.
 module.exports = {
   onSignUp,
@@ -142,5 +161,6 @@ module.exports = {
   onChangePassword,
   onAmr,
   onMip,
-  onDipSub
+  onDipSub,
+  onDestroy
 }

@@ -14,7 +14,7 @@ $(() => {
   $('.cppage').hide()
   $('.uicon').hide()
   $('.dicon').hide()
-  $('.deletecon').hide()
+  $('.deletepage').hide()
 
   // AUTH #############
 
@@ -52,6 +52,6 @@ $(() => {
   $('#additem').on('submit', events.onItemCreate)
   // show items
   $('#visub').on('click', events.onShowItems)
-  // Delete item 1
-  $('#im1dbutton').on('click', events.onI1Destroy)
+  // Delete item
+  $('#deleteform').on('submit', events.onDestroy)
 })

@@ -81,12 +81,16 @@ const showItemsSuccess = function (response) {
   $('.aicon').hide()
   $('.vicon').hide()
   $('.accon').hide()
+  $('.uicon').hide()
+  $('.dicon').hide()
   $('.sipage').show()
   // Item one
+  $('.oneid').text(`ID: ${JSON.stringify(items[0]._id)}`)
   $('.onename').text(`Name: ${JSON.stringify(items[0].name)}`)
   $('.oneloc').text(`Location: ${JSON.stringify(items[0].location)}`)
   $('.onequan').text(`Quantity: ${JSON.stringify(items[0].quantity)}`)
   // Item two
+  $('.twoid').text(`ID: ${JSON.stringify(items[1]._id)}`)
   $('.twoname').text(`Name: ${JSON.stringify(items[1].name)}`)
   $('.twoloc').text(`Location: ${JSON.stringify(items[1].location)}`)
   $('.twoquan').text(`Quantity: ${JSON.stringify(items[1].quantity)}`)
@@ -107,6 +111,18 @@ const showItemFailure = function () {
   $('#message').text('Failed to show items')
 }
 
+// Delete Item Success & Failure
+const onDeleteSuccess = function () {
+  $('#message').show()
+  $('#message').text('Item Successfully Deleted!')
+  $('form').trigger('reset')
+}
+const onDeleteFailure = function () {
+  $('#message').show()
+  $('#message').text('Item Deletion Failed!')
+  $('form').trigger('reset')
+}
+
 // exporting.
 module.exports = {
   signUpSuccess,
@@ -120,5 +136,7 @@ module.exports = {
   signOutSuccess,
   signOutFailure,
   changePasswordSuccess,
-  changePasswordFailure
+  changePasswordFailure,
+  onDeleteSuccess,
+  onDeleteFailure
 }

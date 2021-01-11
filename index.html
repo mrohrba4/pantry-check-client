@@ -94,18 +94,16 @@
                     <!-- Delete page -->
 
                     <!-- Delete Container -->
-                    <div  class="deletecon col-md-4">
+                    <div  class="deletepage col-md-4">
                       <!-- Delete items label -->
                       <p>Delete Items</p>
                       <!-- Delete item form -->
                       <form id="deleteform" class="flex-column">
-                        <select name="ditemselect" id="dselect">
-                          <option value="item1">Item 1</option>
-                          <option value="item2">Item 2</option>
-                          <option value="item3">Item 3</option>
-                          <option value="item4">Item 4</option>
-                          <option value="item5">Item 5</option>
-                        </select>
+                        <input class="dfin"
+                          name="item[id]"
+                          type="text"
+                          placeholder="Item Id"
+                        />
                         <button id="dfbsub">Delete</button>
                       </form>
                     </div>
@@ -185,6 +183,7 @@
                       <!-- Item one placeholder -->
                       <div class="i1">
                         <p class="i1label">Item 1:</p>
+                        <p class="oneid"></p>
                         <p class="onename"></p>
                         <p class="oneloc"></p>
                         <p class="onequan"></p>
@@ -193,6 +192,7 @@
                       <!-- Item two placeholder -->
                       <div class="i2">
                         <p class="i2label">Item 2:</p>
+                        <p class="twoid"></p>
                         <p class="twoname"></p>
                         <p class="twoloc"></p>
                         <p class="twoquan"></p>
