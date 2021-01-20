@@ -74,7 +74,7 @@ const showItems = function () {
     }
   })
 }
-
+// Delete Item API
 const destroy = function (id) {
   console.log(id)
   return $.ajax({
@@ -85,6 +85,7 @@ const destroy = function (id) {
     }
   })
 }
+
 // exporting.
 module.exports = {
   signUp,

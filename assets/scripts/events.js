@@ -44,75 +44,156 @@ const onChangePassword = function (event) {
 
 // Account Manage button
 const onManage = function () {
+  // Alert message
   $('#message').hide()
+  // Add Item Container
   $('.aicon').hide()
+  // Show Items Container
   $('.vicon').hide()
+  // Account Manage Container
   $('.accon').hide()
+  // Item Manage Container
+  $('.itemscon').hide()
+  // Account Manage Page
   $('.ampage').show()
 }
 // Account manage return button
 const onAmr = function () {
+  // Alert message
   $('#message').hide()
-  $('.aicon').show()
-  $('.vicon').show()
+  // Item Manage Container
+  $('.itemscon').show()
+  // Account Manage Container
   $('.accon').show()
+  // Account Manage Page
   $('.ampage').hide()
 }
 // Change Pass page button
 const onCpp = function () {
+  // Change Pass Page
   $('.cppage').show()
+  // Account Manage Page
   $('.ampage').hide()
 }
 // Add Item Page button function
 const onAiButton = function (event) {
+  // Prevent
   event.preventDefault()
+  // Alert Message
   $('#message').hide()
+  // Add Container
   $('.aicon').hide()
+  // Show Container
   $('.vicon').hide()
+  // Account Manage Container
   $('.accon').hide()
+  // Delete Container
   $('.dicon').hide()
+  // Update Container
   $('.uicon').hide()
+  // Add Page
   $('.aipage').show()
 }
 // Add Item return/cancel button
 const onArButton = function () {
+  // Alert Message
   $('#message').hide()
+  // Add Container
   $('.aicon').show()
+  // Show Container
   $('.vicon').show()
+  // Delete Container
   $('.dicon').show()
+  // Update Container
   $('.uicon').show()
+  // Account Manage Container
   $('.accon').hide()
+  // Add Page
   $('.aipage').hide()
 }
 // Show items cancel/return button
 const onVrButton = function () {
+  // Alert Message
   $('#message').hide()
+  // Add Container
   $('.aicon').show()
+  // Show Container
   $('.vicon').show()
+  // Update Container
   $('.uicon').show()
+  // Delete Container
   $('.dicon').show()
+  // Account Manage Container
   $('.accon').hide()
+  // Show Page
   $('.sipage').hide()
 }
 // Manage items page button
 const onMip = function () {
+  // Alert Message
   $('#message').show()
   $('#message').text('Manage User Items')
+  // Add Container
   $('.aicon').show()
+  // Show Container
   $('.vicon').show()
+  // Update Container
   $('.uicon').show()
+  // Delete Container
   $('.dicon').show()
+  // Item Manage Container
   $('.itemscon').hide()
+  // Account Manage Container
   $('.accon').hide()
 }
 // Delete Item Page Button
 const onDipSub = function () {
+  // Alert Message
   $('#message').hide()
+  // Add Container
   $('.aicon').hide()
+  // Show Container
   $('.vicon').hide()
+  // Update Container
   $('.uicon').hide()
+  // Delete Container
   $('.dicon').hide()
+  // Delete Page
   $('.deletepage').show()
+}
+// Delete page cancel button
+const onDpr = function () {
+  // Alert
+  $('#message').hide()
+  // Add Con
+  $('.aicon').show()
+  // Show Con
+  $('.vicon').show()
+  // Update Con
+  $('.uicon').show()
+  // Delete Con
+  $('.dicon').show()
+  // Delete Page
+  $('.deletepage').hide()
+}
+// return home button function
+const onRehome = function () {
+  // Alert
+  $('#message').hide()
+  // Add Con
+  $('.aicon').hide()
+  // Show Con
+  $('.vicon').hide()
+  // Update Con
+  $('.uicon').hide()
+  // Delete Con
+  $('.dicon').hide()
+  // Change Pass Page
+  $('.cppage').hide()
+  // Item Manage Con
+  $('.itemscon').show()
+  // Account Manage Con
+  $('.accon').show()
 }
 
 // RESOURCE #################
@@ -162,5 +243,7 @@ module.exports = {
   onAmr,
   onMip,
   onDipSub,
-  onDestroy
+  onDestroy,
+  onRehome,
+  onDpr
 }

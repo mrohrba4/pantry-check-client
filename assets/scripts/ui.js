@@ -5,18 +5,25 @@ const store = require('./store')
 
 // sign up success & failure.
 const signUpSuccess = function (response) {
+  // Alert
   $('#message').text('Signed Up Successfully!')
+  // Clear form
   $('form').trigger('reset')
 }
 const signUpFailure = function () {
+  // Alert
   $('#message').text('Sign Up Failed!')
+  // Clear form
   $('form').trigger('reset')
 }
 
 // sign in success & failure
 const signInSuccess = function (response) {
+  // Alert
   $('#message').text('Signed In Successfully!')
+  // Translation.
   store.user = response.user
+  // Clear form
   $('form').trigger('reset')
   // hide sign up and in forms.
   $('.sucon').hide()
@@ -29,32 +36,45 @@ const signInSuccess = function (response) {
   $('.vicon').hide()
 }
 const signInFailure = function () {
+  // Alert
   $('#message').text('Sign In Failed!')
+  // Clear form
   $('form').trigger('reset')
 }
 
 // sign out success & failure
 const signOutSuccess = function () {
+  // Alert
   $('#message').show()
   $('#message').text('Signed Out Successfully!')
+  // Signed in Con
   $('.sipcon').hide()
+  // Sign up Con
   $('.sucon').show()
+  // Sign in Con
   $('.sicon').show()
 }
 const signOutFailure = function () {
+  // Alert
   $('#message').text('Sign Out Failed!')
 }
 
 // Change password success & failure
 const changePasswordSuccess = function () {
+  // Alert
   $('#message').show()
   $('#message').text('Password Changed')
+  // Clear form
   $('form').trigger('reset')
+  // Change Pass Page
   $('.cppage').hide()
+  // Account Manage Page
   $('.ampage').show()
 }
 const changePasswordFailure = function () {
+  // Alert
   $('#message').text('Password Change Failed!')
+  // Clear form
   $('form').trigger('reset')
 }
 
@@ -63,63 +83,85 @@ const changePasswordFailure = function () {
 // Add Item success & failure
 const newItemSuccess = function (data) {
   console.log(data)
+  // Translation
   store.item = data.item
+  // Alert
   $('#message').text('Item Added!')
+  // Add Item text
   $('.ailabel').text('Item Added!')
+  // Clear form
   $('form').trigger('reset')
 }
 const newItemFailure = function () {
+  // Alert
   $('#message').text('Item Add Failed!!')
+  // Clear form
   $('form').trigger('reset')
 }
 
 // Show Item Success & Failure
 const showItemsSuccess = function (response) {
+  // Alert
   $('#message').text('Showing Users Items')
-  const items = response.items
-  console.log(items)
+  // item populate loop
+  const item = response.items
+  for (let i = 0; i < item.length; i++) {
+    // 'If there is no items(null)...'
+    if (item[i]._id && item[i].name && item[i].location && item[i].quantity === null) {
+      $('.sipage').find('.silist').append(
+        '<div>' + '<p>' + 'You have no items' + '</p>' + '</div>'
+      )
+    // ...'Populate the items.'
+    } else {
+      $('.sipage').find('.silist').append(
+        // New populated div.
+        '<div class="popitemdiv">' +
+          // Item ID
+          '<p>' + 'ID:' + item[i]._id + '</p>' +
+          // Item Name
+          '<p>' + 'Name:' + item[i].name + '</p>' +
+          // Item Location
+          '<p>' + 'Location:' + item[i].location + '</p>' +
+          // Item Quantity
+          '<p>' + 'Quantity:' + item[i].quantity + '</p>' +
+        '</div>' +
+        // Horizontal divider.
+        '<hr>'
+      )
+    }
+  }
+  // Add Con
   $('.aicon').hide()
+  // Show Con
   $('.vicon').hide()
+  // Acc Manage Con
   $('.accon').hide()
+  // Update Con
   $('.uicon').hide()
+  // Delete Con
   $('.dicon').hide()
+  // Sign in Page
   $('.sipage').show()
-  // Item one
-  $('.oneid').text(`ID: ${JSON.stringify(items[0]._id)}`)
-  $('.onename').text(`Name: ${JSON.stringify(items[0].name)}`)
-  $('.oneloc').text(`Location: ${JSON.stringify(items[0].location)}`)
-  $('.onequan').text(`Quantity: ${JSON.stringify(items[0].quantity)}`)
-  // Item two
-  $('.twoid').text(`ID: ${JSON.stringify(items[1]._id)}`)
-  $('.twoname').text(`Name: ${JSON.stringify(items[1].name)}`)
-  $('.twoloc').text(`Location: ${JSON.stringify(items[1].location)}`)
-  $('.twoquan').text(`Quantity: ${JSON.stringify(items[1].quantity)}`)
-  // Item three
-  $('.threename').text(`Name: ${JSON.stringify(items[2].name)}`)
-  $('.threeloc').text(`Location: ${JSON.stringify(items[2].location)}`)
-  $('.threequan').text(`Quantity: ${JSON.stringify(items[2].quantity)}`)
-  // Item four
-  $('.fourname').text(`Name: ${JSON.stringify(items[3].name)}`)
-  $('.fourloc').text(`Location: ${JSON.stringify(items[3].location)}`)
-  $('.fourquan').text(`Quantity: ${JSON.stringify(items[3].quantity)}`)
-  // Item five
-  $('.fivename').text(`Name: ${JSON.stringify(items[4].name)}`)
-  $('.fiveloc').text(`Location: ${JSON.stringify(items[4].location)}`)
-  $('.fivequan').text(`Quantity: ${JSON.stringify(items[4].quantity)}`)
 }
+
 const showItemFailure = function () {
+  // Alert
   $('#message').text('Failed to show items')
 }
 
 // Delete Item Success & Failure
 const onDeleteSuccess = function () {
+  // Alert
   $('#message').show()
   $('#message').text('Item Successfully Deleted!')
+  //  Clear form
   $('form').trigger('reset')
 }
 const onDeleteFailure = function () {
+  // Alert
   $('#message').show()
   $('#message').text('Item Deletion Failed!')
+  // Clear form
   $('form').trigger('reset')
 }
 

@@ -45,6 +45,10 @@ $(() => {
   $('#vireturn').on('click', events.onVrButton)
   // delete item page button(loads the delete item page.)
   $('#dipsub').on('click', events.onDipSub)
+  // Return home button
+  $('.rehome').on('click', events.onRehome)
+  // Delete Page Return home
+  $('#dprbutton').on('click', events.onDpr)
 
   // RESOURCE MANIPULATION ####################
 
