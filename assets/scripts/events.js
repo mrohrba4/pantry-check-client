@@ -246,10 +246,8 @@ const onShowItems = function () {
 // Delete Item Function
 const onDestroy = function (event) {
   event.preventDefault()
-  console.log(event)
   const data = getFormFields(event.target)
   const item = data.item
-  console.log(item)
   if (item.id.length !== 0) {
     api.destroy(item)
       .then(ui.onDeleteSuccess)

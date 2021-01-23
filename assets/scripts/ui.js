@@ -88,7 +88,6 @@ const changePasswordFailure = function () {
 
 // Add Item success & failure
 const newItemSuccess = function (data) {
-  console.log(data)
   // Translation
   store.item = data.item
   // Alert
@@ -160,8 +159,6 @@ const showItemFailure = function () {
 
 // Delete Item Success & Failure
 const onDeleteSuccess = function (data) {
-  // console.log(data)
-  // store.item = data.item
   // Alert
   $('#message').show()
   $('#message').text('Item Successfully Deleted!')
@@ -178,7 +175,6 @@ const onDeleteFailure = function () {
 
 // Update Item Success & Failure
 const updateItemSuccess = function (data) {
-  console.log(data)
   // Show Alert
   $('#message').show()
   // Alert

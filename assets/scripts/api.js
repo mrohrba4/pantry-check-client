@@ -47,7 +47,6 @@ const changePassword = function (formData) {
 
 // Add Item API
 const newItem = function (data) {
-  console.log(data)
   store.item = data.item
   return $.ajax({
     url: config.apiUrl + '/items',
@@ -76,7 +75,6 @@ const showItems = function () {
 }
 // Delete Item API
 const destroy = function (item) {
-  console.log(item)
   const id = item.id
   return $.ajax({
     url: config.apiUrl + '/items/' + id,
@@ -88,9 +86,6 @@ const destroy = function (item) {
 }
 // Update Item
 const updateItem = function (data) {
-  console.log(data)
-  console.log(data.item.id)
-  console.log(store.user.item)
   return $.ajax({
     url: config.apiUrl + '/items/' + data.item.id,
     method: 'PATCH',
