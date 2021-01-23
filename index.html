@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Pantry Check</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <!-- Main Body -->
+    <body>
+      <!-- Main Container -->
+      <div class="container-fluid">
+        <!-- Nav bar Row -->
+        	<div class="nvr row">
+            <!-- Nav bar col -->
+        		<div class="navbar col-md-12">
+                <img class="logo" src="public/logoicon.png" alt="logo">
+        		</div>
+        	</div>
+          <!-- Main content Row -->
+        	<div class="mc row">
+            <!-- Main content col -->
+        		<div class="mc2 col-lg-12">
+              <!-- Main page title -->
+              <div class="title">
+                <h1>Welcome to Pantry Check</h1>
+              </div>
+              <!-- Main page subtitle -->
+              <div class="subtitle">
+                <h5>Never guess if you have groceries or supplies again!</h5>
+              </div>
+              <!-- Alert message -->
+              <p id="message"></p>
+              <!-- main display Div -->
+        			<div class="main row">
+              		<div class="sipcon col-md-12">
+                    <!-- Signed In Page -->
+
+                    <!-- Manage items container -->
+                    <div class="itemscon col-md-6">
+                      <!-- Manage items label -->
+                      <p>Manage Items</p>
+                      <!-- Manage items button -->
+                      <button id="mainitemspb">Items</button>
+                    </div>
+                    <!-- Manage Account Container -->
+                    <div class="accon col-md-6">
+                      <!-- Manage Account label -->
+                      <p>Account</p>
+                      <!-- Manage Account page button -->
+                      <button id="managesub">Manage</button>
+                      <!-- Sign out button -->
+                      <button id="signoutsub">Sign Out</button>
+                    </div>
+
+
+                    <!-- Items page -->
+
+                    <!-- Add items container -->
+                    <div class="aicon col-md-3">
+                      <!-- Add items label -->
+                      <h5>Add Items</h5>
+                      <!-- Add items page button -->
+                      <button id="aipb">Add</button>
+                      <!-- Return home button -->
+                      <button class="rehome">Return</button>
+                    </div>
+                    <!-- View Items Container -->
+                    <div class="vicon col-md-3">
+                      <!-- Show items label -->
+                      <h5>Show Items</h5>
+                      <!-- Show items page button -->
+                      <button id="visub">Show</button>
+                      <!-- Return home button -->
+                      <button class="rehome">Return</button>
+                    </div>
+                    <!-- Update Items Container -->
+                    <div  class="uicon col-md-3">
+                      <!-- Update Items container label -->
+                      <h6>Update Items</h6>
+                      <!-- update items page button -->
+                      <button id="uipsub">Update</button>
+                      <!-- Return home button -->
+                      <button class="rehome">Return</button>
+                    </div>
+                    <!-- Delete Items Container -->
+                    <div  class="dicon col-md-3">
+                      <!-- Delete items container label -->
+                      <h6>Delete Items</h6>
+                      <!-- Delete items page button -->
+                      <button id="dipsub">Delete</button>
+                      <!-- Return home button -->
+                      <button class="rehome">Return</button>
+                    </div>
+
+
+                    <!-- Delete page -->
+
+                    <!-- Delete Container -->
+                    <div  class="deletepage col-md-12">
+                      <!-- Delete items label -->
+                      <p>Delete Items</p>
+                      <!-- Delete item form -->
+                      <form id="deleteform" class="flex-column">
+                        <input class="dfin"
+                          name="item[id]"
+                          type="text"
+                          placeholder="Item Id"
+                        />
+                        <button id="dfbsub">Delete</button>
+                      </form>
+                      <button id="dprbutton">Cancel</button>
+                    </div>
+
+
+                    <!-- Account Manage Page -->
+
+                    <!-- Account Manage Container -->
+                    <div class="ampage col-md-12">
+                      <!-- Account manage label -->
+                      <h3 class="amlabel">Manage your account:</h3>
+                      <!-- Change password button -->
+                      <button id="cpbutton">Change Password</button>
+                      <!-- Return to home button -->
+                      <button id="amr">Return</button>
+                    </div>
+
+
+                    <!-- Change Password Page -->
+
+                    <!-- Change password container -->
+                    <div class="cppage col-md-12">
+                      <!-- Change password page label -->
+                      <h3 class="cplabel">Change your Password</h3>
+                      <!-- Change password form -->
+                      <form id="changepass" class="flex-column">
+                        <input class="cp1"
+                          name="passwords[old]"
+                          type="password"
+                          placeholder="Old Password"
+                        />
+                        <input class="cp1"
+                          name="passwords[new]"
+                          type="password"
+                          placeholder="New Password"
+                        />
+                        <button id="cpfbutton" class="cp1" type="submit">Submit</button>
+                      </form>
+                      <button class="rehome">Cancel</button>
+                    </div>
+
+
+                    <!-- Add Items Page -->
+
+                    <!-- Add items container -->
+                    <div class="aipage col-md-12">
+                      <!-- Add item page label -->
+                      <h3 class="ailabel">Add your item below</h3>
+                      <!-- Add item form -->
+                      <form id="additem" class="flex-column">
+                        <input class="ai1"
+                          name="item[name]"
+                          type="text"
+                          placeholder="Name"
+                        />
+                        <input class="ai1"
+                          name="item[quantity]"
+                          type="number"
+                          placeholder="Quantity"
+                        />
+                        <select name="location" id="location" class="ai1">
+                          <option value="fridge">Fridge</option>
+                          <option value="freezer">Freezer</option>
+                          <option value="pantry">Pantry</option>
+                          <option value="nonfood">Non-food</option>
+                        </select>
+                        <button id="aisubmit" class="ai1" type="submit">Add Item!</button>
+                      </form>
+                      <!-- Return home button -->
+                      <button id="aireturn" class="ai1">Cancel</button>
+                    </div>
+
+
+                    <!-- Show Item Page -->
+
+                    <!-- Show items container -->
+                    <div class="sipage col-md-12">
+                      <div class="silist">
+                      </div>
+                      <button id="vireturn" class="vi1">Return</button>
+                    </div>
+
+                    <!-- Update Item Page -->
+
+                    <!-- Update Item Container -->
+                    <div class="uipage col-md-12">
+                      <!-- Update Item label -->
+                      <h3>Update Item</h3>
+                      <!-- Update Item Form -->
+                      <form id="updateitem" class="flex-column">
+                        <!-- ID -->
+                        <input class="upi1"
+                          name="item[id]"
+                          type="text"
+                          placeholder="Item ID"
+                        />
+                        <!-- Name -->
+                        <input class="upi1"
+                          name="item[name]"
+                          type="text"
+                          placeholder="New Name"
+                        />
+                        <!-- Location -->
+                        <select name="uplocation" id="uplocation" class="upi1">
+                          <option value="fridge">Fridge</option>
+                          <option value="freezer">Freezer</option>
+                          <option value="pantry">Pantry</option>
+                          <option value="nonfood">Non-food</option>
+                        </select>
+                        <!-- Quantity -->
+                        <input class="upi1"
+                          name="item[quantity]"
+                          type="number"
+                          placeholder="New Amount"
+                        />
+                        <button id="upisubmit" class="upi1" type="submit">Update</button>
+                      </form>
+                      <!-- Return Home Button -->
+                      <button id="uireturn" class="upi1">Cancel</button>
+                    </div>
+
+
+              		</div>
+
+                <!-- Sign in Container -->
+        				<div class="sicon col-md-6">
+                  <!-- Sign in con label -->
+                  <h4 class="si1">Sign in</h4>
+                  <!-- Sign in Form -->
+                  <form id="sign-in">
+                    <input class="si1"
+                      name="credentials[email]"
+                      type="text"
+                      placeholder="Email"
+                    />
+                    <input class="si1"
+                      name="credentials[password]"
+                      type="password"
+                      placeholder="Password"
+                    />
+                    <button class="sibutton si1" type="submit">Submit</button>
+                  </form>
+        				</div>
+
+
+                <!-- Sign up Container -->
+        				<div class="sucon col-md-6">
+                  <!-- Sign up con label -->
+                  <h4 class="su1">Sign up</h4>
+                  <!-- Sign up Form -->
+                  <form id="sign-up">
+                    <input class="su1"
+                      name="credentials[email]"
+                      type="text"
+                      placeholder="Email"
+                    />
+                    <input class="su1"
+                      name="credentials[password]"
+                      type="password"
+                      placeholder="Password"
+                    />
+                    <input class="su1"
+                      name="credentials[password_confirmation]"
+                      type="password"
+                      placeholder="Confirm Password"
+                    />
+                    <button class="subutton su1" type="submit">Submit</button>
+                  </form>
+        				</div>
+
+
+        			</div>
+        		</div>
+        	</div>
+          <!-- Footer Row -->
+        	<div class="ft row">
+            <!-- Footer col -->
+        		<div class="crcol col-md-12">
+              <p class="copyr">2021 Michael Rohrbaugh &#169;</p>
+        		</div>
+        	</div>
+      </div>
+    </body>
+</html>
