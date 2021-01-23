@@ -206,7 +206,7 @@ body {
   margin: 5px;
   text-decoration: none;
 }
-// add items form id
+// add items form
 #additem {
   display: flex;
   align-items: center;
@@ -214,6 +214,12 @@ body {
 }
 // change pass form
 #changepass {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// update item form
+#updateitem {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -226,6 +232,7 @@ body {
 .aipage {
   background-color: rgba(86, 128, 233, 0.9);
   box-shadow: 5px 10px 5px;
+  border: black 1px solid;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -235,6 +242,7 @@ body {
 .sipage {
   background-color: rgba(86, 128, 233, 0.9);
   box-shadow: 5px 10px 5px;
+  border: black 1px solid;
   height: 100%;
   overflow: hidden;
   overflow-y: scroll;
@@ -244,6 +252,7 @@ body {
 .ampage {
   background-color: rgba(86, 128, 233, 0.9);
   box-shadow: 5px 10px 5px;
+  border: black 1px solid;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -253,6 +262,7 @@ body {
 .cppage {
   background-color: rgba(86, 128, 233, 0.9);
   box-shadow: 5px 10px 5px;
+  border: black 1px solid;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -262,6 +272,17 @@ body {
 .deletepage {
   background-color: rgba(86, 128, 233, 0.9);
   box-shadow: 5px 10px 5px;
+  border: black 1px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+// Update item Page
+.uipage {
+  background-color: rgba(86, 128, 233, 0.9);
+  box-shadow: 5px 10px 5px;
+  border: black 1px solid;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -294,6 +315,15 @@ body {
 #managesub {
   margin: 5px;
 }
+// show items div
+.popitemdiv {
+  display: flex-column;
+  align-items: center;
+  justify-content: center;
+}
+.popitemlabel {
+  font-weight: bold;
+}
 
 // MISC ######
 
@@ -305,47 +335,15 @@ body {
 .cp1 {
   margin: 5px;
 }
+// update item inputs/button
+.upi1 {
+  margin: 5px;
+}
 // "location" drop down menu width
 #location {
   width: 175px;
 }
-// item 1
-.i1 {
-  border: black 1px solid;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-// item 2
-.i2 {
-  border: black 1px solid;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-// item 3
-.i3 {
-  border: black 1px solid;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-// item 4
-.i4 {
-  border: black 1px solid;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-// item 5
-.i5 {
-  border: black 1px solid;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+// Update "location" drop down menu width
+#uplocation {
+  width: 175px;
 }

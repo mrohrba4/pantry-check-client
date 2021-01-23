@@ -15,6 +15,7 @@ $(() => {
   $('.uicon').hide()
   $('.dicon').hide()
   $('.deletepage').hide()
+  $('.uipage').hide()
 
   // AUTH #############
 
@@ -49,6 +50,10 @@ $(() => {
   $('.rehome').on('click', events.onRehome)
   // Delete Page Return home
   $('#dprbutton').on('click', events.onDpr)
+  // Update Item Page Button
+  $('#uipsub').on('click', events.onUipage)
+  // Update Item Page Return home
+  $('#uireturn').on('click', events.onUipr)
 
   // RESOURCE MANIPULATION ####################
 
@@ -58,4 +63,6 @@ $(() => {
   $('#visub').on('click', events.onShowItems)
   // Delete item
   $('#deleteform').on('submit', events.onDestroy)
+  // Update Item
+  $('#updateitem').on('submit', events.onUpdateItem)
 })

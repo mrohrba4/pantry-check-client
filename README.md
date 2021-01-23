@@ -31,9 +31,12 @@ Version 1 is focused on the basic Authorization of the user, and the basic resou
 - A "Stores" branch, where you can add your favorite and most visited stores.
 - A "Recipes" branch, where you can input, view, edit your own recipes and the ability to see if you can make that meal with the items you have.
 
+### Link to API repo
+
+https://github.com/mrohrba4/pantry-check-api
 
 ### Wireframes:
 
-[Main page] (https://imgur.com/dHrIqP7)
-[Signed In] (https://imgur.com/nUzGMMM)
-[Add Items] (https://imgur.com/Lsj9mPF)
+[Main page](https://imgur.com/dHrIqP7)
+[Signed In](https://imgur.com/nUzGMMM)
+[Add Items](https://imgur.com/Lsj9mPF)

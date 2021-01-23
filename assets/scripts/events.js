@@ -176,6 +176,21 @@ const onDpr = function () {
   // Delete Page
   $('.deletepage').hide()
 }
+// Update Item Page button
+const onUipage = function () {
+  // Alert Message
+  $('#message').hide()
+  // Add Container
+  $('.aicon').hide()
+  // Show Container
+  $('.vicon').hide()
+  // Update Container
+  $('.uicon').hide()
+  // Delete Container
+  $('.dicon').hide()
+  // Update Page
+  $('.uipage').show()
+}
 // return home button function
 const onRehome = function () {
   // Alert
@@ -195,6 +210,21 @@ const onRehome = function () {
   // Account Manage Con
   $('.accon').show()
 }
+// Update Page Return button
+const onUipr = function () {
+  // Alert
+  $('#message').hide()
+  // Add Con
+  $('.uipage').hide()
+  // Add Con
+  $('.aicon').show()
+  // Show Con
+  $('.vicon').show()
+  // Update Con
+  $('.uicon').show()
+  // Delete Con
+  $('.dicon').show()
+}
 
 // RESOURCE #################
 
@@ -213,20 +243,31 @@ const onShowItems = function () {
     .then(ui.showItemsSuccess)
     .then(ui.showItemsFailure)
 }
-
+// Delete Item Function
 const onDestroy = function (event) {
   event.preventDefault()
+  console.log(event)
   const data = getFormFields(event.target)
   const item = data.item
   console.log(item)
   if (item.id.length !== 0) {
-    api.destroy(item.id)
+    api.destroy(item)
       .then(ui.onDeleteSuccess)
       .catch(ui.onDeleteFailure)
   } else {
     $('#message').text('An Error Has Occured!')
   }
 }
+// Update Item Function
+const onUpdateItem = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const data = getFormFields(form)
+  api.updateItem(data)
+    .then(ui.updateItemSuccess)
+    .catch(ui.updateItemFailure)
+}
+
 // Exporting.
 module.exports = {
   onSignUp,
@@ -245,5 +286,8 @@ module.exports = {
   onDipSub,
   onDestroy,
   onRehome,
-  onDpr
+  onDpr,
+  onUipage,
+  onUpdateItem,
+  onUipr
 }

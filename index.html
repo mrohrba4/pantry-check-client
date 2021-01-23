@@ -160,7 +160,7 @@
                     <!-- Add items container -->
                     <div class="aipage col-md-12">
                       <!-- Add item page label -->
-                      <p class="ailabel">Add your item below</p>
+                      <h3 class="ailabel">Add your item below</h3>
                       <!-- Add item form -->
                       <form id="additem" class="flex-column">
                         <input class="ai1"
@@ -193,6 +193,45 @@
                       <div class="silist">
                       </div>
                       <button id="vireturn" class="vi1">Return</button>
+                    </div>
+
+                    <!-- Update Item Page -->
+
+                    <!-- Update Item Container -->
+                    <div class="uipage col-md-12">
+                      <!-- Update Item label -->
+                      <h3>Update Item</h3>
+                      <!-- Update Item Form -->
+                      <form id="updateitem" class="flex-column">
+                        <!-- ID -->
+                        <input class="upi1"
+                          name="item[id]"
+                          type="text"
+                          placeholder="Item ID"
+                        />
+                        <!-- Name -->
+                        <input class="upi1"
+                          name="item[name]"
+                          type="text"
+                          placeholder="New Name"
+                        />
+                        <!-- Location -->
+                        <select name="uplocation" id="uplocation" class="upi1">
+                          <option value="fridge">Fridge</option>
+                          <option value="freezer">Freezer</option>
+                          <option value="pantry">Pantry</option>
+                          <option value="nonfood">Non-food</option>
+                        </select>
+                        <!-- Quantity -->
+                        <input class="upi1"
+                          name="item[quantity]"
+                          type="number"
+                          placeholder="New Amount"
+                        />
+                        <button id="upisubmit" class="upi1" type="submit">Update</button>
+                      </form>
+                      <!-- Return Home Button -->
+                      <button id="uireturn" class="upi1">Cancel</button>
                     </div>
 
 

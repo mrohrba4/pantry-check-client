@@ -6,12 +6,14 @@ const store = require('./store')
 // sign up success & failure.
 const signUpSuccess = function (response) {
   // Alert
+  $('#message').show()
   $('#message').text('Signed Up Successfully!')
   // Clear form
   $('form').trigger('reset')
 }
 const signUpFailure = function () {
   // Alert
+  $('#message').show()
   $('#message').text('Sign Up Failed!')
   // Clear form
   $('form').trigger('reset')
@@ -20,6 +22,7 @@ const signUpFailure = function () {
 // sign in success & failure
 const signInSuccess = function (response) {
   // Alert
+  $('#message').show()
   $('#message').text('Signed In Successfully!')
   // Translation.
   store.user = response.user
@@ -37,6 +40,7 @@ const signInSuccess = function (response) {
 }
 const signInFailure = function () {
   // Alert
+  $('#message').show()
   $('#message').text('Sign In Failed!')
   // Clear form
   $('form').trigger('reset')
@@ -56,6 +60,7 @@ const signOutSuccess = function () {
 }
 const signOutFailure = function () {
   // Alert
+  $('#message').show()
   $('#message').text('Sign Out Failed!')
 }
 
@@ -73,6 +78,7 @@ const changePasswordSuccess = function () {
 }
 const changePasswordFailure = function () {
   // Alert
+  $('#message').show()
   $('#message').text('Password Change Failed!')
   // Clear form
   $('form').trigger('reset')
@@ -86,6 +92,7 @@ const newItemSuccess = function (data) {
   // Translation
   store.item = data.item
   // Alert
+  $('#message').show()
   $('#message').text('Item Added!')
   // Add Item text
   $('.ailabel').text('Item Added!')
@@ -94,6 +101,7 @@ const newItemSuccess = function (data) {
 }
 const newItemFailure = function () {
   // Alert
+  $('#message').show()
   $('#message').text('Item Add Failed!!')
   // Clear form
   $('form').trigger('reset')
@@ -102,6 +110,7 @@ const newItemFailure = function () {
 // Show Item Success & Failure
 const showItemsSuccess = function (response) {
   // Alert
+  $('#message').show()
   $('#message').text('Showing Users Items')
   // item populate loop
   const item = response.items
@@ -117,13 +126,13 @@ const showItemsSuccess = function (response) {
         // New populated div.
         '<div class="popitemdiv">' +
           // Item ID
-          '<p>' + 'ID:' + item[i]._id + '</p>' +
+          '<p class="popitemlabel">' + 'ID:' + item[i]._id + '</p>' +
           // Item Name
-          '<p>' + 'Name:' + item[i].name + '</p>' +
+          '<p class="popitemlabel">' + 'Name:' + item[i].name + '</p>' +
           // Item Location
-          '<p>' + 'Location:' + item[i].location + '</p>' +
+          '<p class="popitemlabel">' + 'Location:' + item[i].location + '</p>' +
           // Item Quantity
-          '<p>' + 'Quantity:' + item[i].quantity + '</p>' +
+          '<p class="popitemlabel">' + 'Quantity:' + item[i].quantity + '</p>' +
         '</div>' +
         // Horizontal divider.
         '<hr>'
@@ -143,14 +152,16 @@ const showItemsSuccess = function (response) {
   // Sign in Page
   $('.sipage').show()
 }
-
 const showItemFailure = function () {
   // Alert
+  $('#message').show()
   $('#message').text('Failed to show items')
 }
 
 // Delete Item Success & Failure
-const onDeleteSuccess = function () {
+const onDeleteSuccess = function (data) {
+  // console.log(data)
+  // store.item = data.item
   // Alert
   $('#message').show()
   $('#message').text('Item Successfully Deleted!')
@@ -161,6 +172,25 @@ const onDeleteFailure = function () {
   // Alert
   $('#message').show()
   $('#message').text('Item Deletion Failed!')
+  // Clear form
+  $('form').trigger('reset')
+}
+
+// Update Item Success & Failure
+const updateItemSuccess = function (data) {
+  console.log(data)
+  // Show Alert
+  $('#message').show()
+  // Alert
+  $('#message').text('Item Updated!')
+  // Clear form
+  $('form').trigger('reset')
+}
+const updateItemFailure = function () {
+  // Show Alert
+  $('#message').show()
+  // Alert
+  $('#message').text('Item Failed To Update!')
   // Clear form
   $('form').trigger('reset')
 }
@@ -180,5 +210,7 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   onDeleteSuccess,
-  onDeleteFailure
+  onDeleteFailure,
+  updateItemSuccess,
+  updateItemFailure
 }
